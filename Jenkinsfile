@@ -1,10 +1,11 @@
 pipeline {
-    agent { label 'master' }
+    agent any
     stages {
-        stage('build') {
+        stage('run') {
             steps {
-                echo 'Learn DevOps '
-                sh 'echo Integrating Jenkins Pipeline with GitHub Webhook using Jenkinsfile'
+                echo 'Learn DevOps'
+                sh 'python3 --version'
+                sh 'python3 pipeline.py'
             }
         }
     }
